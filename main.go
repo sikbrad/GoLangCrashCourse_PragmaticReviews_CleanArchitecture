@@ -6,9 +6,13 @@ import (
 	"log"
 	"github.com/gorilla/mux"
 	"net/http"
+	"os"
 )
 
 func main(){
+	//firestore credential
+	os.Setenv("GOOGLE_APPLICATION_CREDENTIALS", "C:\\Users\\USER\\go\\src\\awesomeProject3\\repository\\database_key\\gqpost-3477c-firebase-adminsdk-pc8dq-bf8a0df744.json")
+
 	fmt.Println("entered main")
 
 	router := mux.NewRouter()
