@@ -28,7 +28,8 @@ import (
 
 var(
 	postController controller.PostController = controller.NewPostController()
-	httpRouter router.Router = router.NewMuxRouter()
+	//httpRouter router.Router = router.NewMuxRouter()
+	httpRouter router.Router = router.NewChiRouter()
 )
 func main(){
 	//firestore credential

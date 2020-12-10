@@ -27,6 +27,6 @@ func (*muxRouter) POST(url string, f func(resp http.ResponseWriter, request *htt
 }
 
 func (*muxRouter) SERVE(port string) {
-	fmt.Println("server listening on port :",port)
+	fmt.Println("Mux http server listening on port :",port)
 	http.ListenAndServe(port,muxDispatcher)
 }
