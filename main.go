@@ -3,6 +3,8 @@ package main
 import (
 	"awesomeProject3/controller"
 	router "awesomeProject3/http"
+	"awesomeProject3/repository"
+	"awesomeProject3/service"
 	"fmt"
 	"net/http"
 	"os"
@@ -27,7 +29,9 @@ import (
 //}
 
 var(
-	postController controller.PostController = controller.NewPostController()
+	postRepository repository.PostRepository = repository.NewFirestoreRepository()
+	postService service.PostService = service.NewPostService(postRepository)
+	postController controller.PostController = controller.NewPostController(postService)
 	//httpRouter router.Router = router.NewMuxRouter()
 	httpRouter router.Router = router.NewChiRouter()
 )

@@ -11,7 +11,8 @@ import (
 )
 
 var (
-	postService service.PostService = service.NewPostService()
+	//postService service.PostService = service.NewPostService()
+	postService service.PostService
 )
 
 type PostController interface {
@@ -24,7 +25,8 @@ type controller struct {
 }
 
 
-func NewPostController() PostController{
+func NewPostController(service service.PostService) PostController{
+	postService = service
 	return &controller{}
 }
 

@@ -9,7 +9,8 @@ import (
 
 var(
 	//initialize repo with concrete firestore repository
-	repo repository.PostRepository = repository.NewFirestoreRepository()
+	//repo repository.PostRepository = repository.NewFirestoreRepository()
+	repo repository.PostRepository
 )
 
 type PostService interface{
@@ -23,7 +24,8 @@ type service struct {
 }
 
 
-func NewPostService() PostService {
+func NewPostService(newRepo repository.PostRepository) PostService {
+	repo = newRepo
 	return &service{
 
 	}
