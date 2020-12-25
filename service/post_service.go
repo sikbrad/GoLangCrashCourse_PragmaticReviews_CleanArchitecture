@@ -1,8 +1,8 @@
 package service
 
 import (
-	"awesomeProject3/entity"
-	"awesomeProject3/repository"
+	"../entity"
+	"../repository"
 	"errors"
 	"math/rand"
 )

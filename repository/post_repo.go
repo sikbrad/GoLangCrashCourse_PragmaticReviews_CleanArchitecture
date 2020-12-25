@@ -1,6 +1,6 @@
 package repository
 
-import "awesomeProject3/entity"
+import "../entity"
 
 //cleanarch
 type PostRepository interface {

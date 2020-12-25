@@ -1,7 +1,7 @@
 package repository
 
 import (
-	"awesomeProject3/entity"
+	"../entity"
 	"cloud.google.com/go/firestore"
 	"google.golang.org/api/iterator"
 	"context"

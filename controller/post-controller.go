@@ -1,13 +1,13 @@
 package controller
 
 import (
-	"awesomeProject3/entity"
-	"awesomeProject3/service"
+	"../entity"
+	"../service"
 	"encoding/json"
 	"log"
 	"math/rand"
 	"net/http"
-	"awesomeProject3/errors"
+	"../errors"
 )
 
 var (
